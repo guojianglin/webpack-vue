@@ -9,10 +9,10 @@
     <div class="mui-content">
       <ul class="mui-table-view mui-grid-view mui-grid-9">
         <li class="mui-table-view-cell mui-media mui-col-sm-4 mui-col-xs-4">
-          <a href="#">
+          <router-link to="/home/newlist">
             <img src="../../images/menu1.png" alt="">
             <div class="mui-media-body">新闻资讯</div>
-          </a>
+          </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-sm-4 mui-col-xs-4">
           <a href="#">
@@ -70,7 +70,11 @@
           console.log('ok');
           console.log(result);
           if (result.status === 200) {
-            Toast('获取轮播图成功');
+            Toast({
+              message: '获取轮播图成功',
+              position: 'middle',
+              duration: 1000
+            });
             this.lunbotuList = result.body.slice(0, 5)
           } else {
             Toast('获取轮播图失败。。。')
