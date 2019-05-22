@@ -1,7 +1,7 @@
 <template>
   <ul class="mui-table-view mui-table-view-chevron">
     <li class="mui-table-view-cell mui-media" v-for="item in newlist" :key="item.id">
-      <router-link class="mui-navigate-right" :to="'/home/newlist/' + item.id">
+      <router-link class="mui-navigate-right" :to="'/home/newinfo/' + item.id">
         <img class="mui-media-object mui-pull-left" :src="item.img_url">
         <div class="mui-media-body">
           <h1>{{ item.title }}</h1>

@@ -2,8 +2,8 @@
   <div class="cmt-container">
     <h3>评论槽位</h3>
     <hr>
-    <textarea placeholder="请输入的您的评论（最多120字）"></textarea>
-    <mt-button type="primary" size="large">发表评论</mt-button>
+    <textarea placeholder="请输入的您的评论（最多120字）" v-model="msg"></textarea>
+    <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
 
     <div class="cmt-list" v-for="(item,index) in comments">
       <div class="cmt-item">
@@ -29,7 +29,8 @@
     data(){
       return {
         pageIndex:1,
-        comments:[]
+        comments:[],
+        msg:''
       }
     },
     created(){
@@ -56,6 +57,29 @@
       getMore(){
         this.pageIndex++;
         this.getComments();
+      },
+      postComment(){
+        //验证内容不能为空
+        if (this.msg.trim().length === 0) {
+          return Toast('评论内容不能为空')
+        }
+
+        // 这里是当有能够真实接收评论数据接口时用的代码
+        // this.$http.post('url',{
+        //   content:this.msg.trim()
+        // },{emulateJSON:true}).then()
+
+
+
+        // 将来有真实数据接口时，以下内容应在post成功之后执行
+        var cmt = {
+          nser_name:'匿名用户',
+          add_time:Date.now(),
+          content:this.msg.trim()
+        }
+        this.comments.unshift(cmt)
+        this.msg = ''
+
       }
     },
 

@@ -1,10 +1,6 @@
 <template>
   <div>
-    <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in lunbotuList" :key="item.id">
-        <img :src="item.url" alt="">
-      </mt-swipe-item>
-    </mt-swipe>
+    <my-swiper :lunbotuList="lunbotuList" :isfull="true"></my-swiper>
 
     <div class="mui-content">
       <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -15,16 +11,16 @@
           </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-sm-4 mui-col-xs-4">
-          <a href="#">
+          <router-link to="/home/photolist">
             <img src="../../images/menu2.png" alt="">
             <div class="mui-media-body">图片分享</div>
-          </a>
+          </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-sm-4 mui-col-xs-4">
-          <a href="#">
+          <router-link to="home/goodslist">
             <img src="../../images/menu3.png" alt="">
             <div class="mui-media-body">商品购买</div>
-          </a>
+          </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-sm-4 mui-col-xs-4">
           <a href="#">
@@ -53,6 +49,7 @@
 
 <script>
   import {Toast} from 'mint-ui'
+  import swiper from '../subcomponent/swiper.vue'
 
   export default {
     data() {
@@ -67,8 +64,8 @@
       getLunbotu() {
         // 获取数据
         this.$http.get('http://jsonplaceholder.typicode.com/photos').then(result => {
-          console.log('ok');
-          console.log(result);
+          // console.log('ok');
+          // console.log(result);
           if (result.status === 200) {
             Toast({
               message: '获取轮播图成功',
@@ -81,33 +78,15 @@
           }
         })
       }
+    },
+    components:{
+      "my-swiper":swiper
     }
   }
 </script>
 
 <style scoped lang="less">
-  .mint-swipe {
-    height: 200px;
 
-    .mint-swipe-item {
-      &:nth-child(1) {
-        background-color: cyan;
-      }
-
-      &:nth-child(2) {
-        background-color: yellow;
-      }
-
-      &:nth-child(3) {
-        background-color: hotpink;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
   .mui-content{
 
     .mui-grid-view{

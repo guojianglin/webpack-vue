@@ -1,0 +1,21 @@
+/*设置vue-preview插件样式*/
+
+.thumbs{
+    display:flex;
+}
+.thumbs >div {
+    width: 100%
+}
+.thumbs .my-gallery{
+    display:flex;
+    flex-wrap:wrap
+}
+.thumbs .my-gallery figure{
+    /*width:150px;*/
+    margin: 10px;
+    box-shadow: 0 0 10px #ccc
+}
+.thumbs .my-gallery figure img{
+    width: 100px;
+    vertical-align: middle;
+}
