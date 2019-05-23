@@ -65,7 +65,9 @@
         slide:[],
         flag:false,
         selectCount:1,
-        maxStorage:8
+        maxStorage:8,
+        id:this.$route.params.id,
+        sell_price:2699
       }
     },
     created(){
@@ -98,6 +100,13 @@
       },
       addToShopCar(){
         this.flag=!this.flag;
+        var goodsinfo = {
+          id:this.id,
+          count:this.selectCount,
+          price:this.sell_price,
+          selected:true
+        };
+        this.$store.commit("addToCar",goodsinfo)
       },
       beforeEnter(el){
         el.style.transform="translate(0,0)"
