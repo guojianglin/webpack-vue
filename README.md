@@ -193,7 +193,29 @@ MINT-UI 做的
 + 体会：基本的思路就是获取数据、渲染数据。其次就是一些特殊效果的实现，比如图片的查看、比如钩子函数实现的跳入购物车动画。
 
 # 一下是项目各界面显示的效果
-![Image text]()
+![Image 1首页](https://github.com/guojianglin/webpack-vue/blob/master/show_img/HOME.png)
+
+![Image 2购物车](https://github.com/guojianglin/webpack-vue/blob/master/show_img/SHOPCAR.png)
+
+![Image 3新闻列表](https://github.com/guojianglin/webpack-vue/blob/master/show_img/NEWSLIST.png)
+
+![Image 4新闻详情](https://github.com/guojianglin/webpack-vue/blob/master/show_img/NEWSINFO.png)
+
+![Image 5图片分享列表](https://github.com/guojianglin/webpack-vue/blob/master/show_img/PHOTOSLIST.png)
+
+![Image 6图片详情](https://github.com/guojianglin/webpack-vue/blob/master/show_img/PHOTOSINFO.png)
+
+![Image 7图片预览](https://github.com/guojianglin/webpack-vue/blob/master/show_img/PHOTOSINFO_PREVIEW.png)
+
+![Image 8图片评论](https://github.com/guojianglin/webpack-vue/blob/master/show_img/PHOTOSINFO_COMMENTS.png)
+
+![Image 9商品列表](https://github.com/guojianglin/webpack-vue/blob/master/show_img/GOODSLIST.png)
+
+![Image 10商品详情](https://github.com/guojianglin/webpack-vue/blob/master/show_img/GOODSINFO.png)
+
+![Image 11加入购物车动画](https://github.com/guojianglin/webpack-vue/blob/master/show_img/ADDTOCAR.png)
+
+
 
 
 
