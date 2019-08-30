@@ -25,7 +25,7 @@ npm run dev
 + [MUI](http://dev.dcloud.net.cn/mui/)
 
 ## 前端测试用的万能数据接口
-+ [JSONPlaceholder](http://jsonplaceholder.typicode.com/)
++ [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
 
 
@@ -64,7 +64,7 @@ npm run dev
 
 ## 加载轮播图数据
 + 载入 vue-resource 并跟 Vue 结合起来 
-+ 借助 this.$http.get() 从[图片数据接口](http://jsonplaceholder.typicode.com/photos)拿到数据
++ 借助 this.$http.get() 从[图片数据接口](https://jsonplaceholder.typicode.com/photos)拿到数据
 + 拿到的图片数据 5000 条，借助 Array.slice(0,5) 只拿5条数据
 
 + 将拿到的数据用 v-for 渲染到轮播图的位置
@@ -93,7 +93,7 @@ npm run dev
 ## 新闻页面的制作
 + 在 MUI 中将 media-list.html 选择一个模板复制过来
 + 修改样式为我们需要的样子，图片src暂时指向我的GitHub头像
-+ 同样借助 vue-resource 在新闻页面进行[新闻数据](https://my-json-server.typicode.com/guojianglin/vitual-data/db)的获取,这里用的是放到GitHub的假数据，借助[JSONPlaceholder](http://jsonplaceholder.typicode.com/)进行网络数据模拟
++ 同样借助 vue-resource 在新闻页面进行[新闻数据](https://my-json-server.typicode.com/guojianglin/vitual-data/db)的获取,这里用的是放到GitHub的假数据，借助[JSONPlaceholder](https://jsonplaceholder.typicode.com/)进行网络数据模拟
 + 用 v-for 渲染到页面,调整样式
 
 + 定义一个全局时间过滤器，对新闻的时间进行过滤
@@ -101,7 +101,7 @@ npm run dev
 ## 改造新闻列表，点击跳转到新闻详情页
 + 同上改造路由，新加组件 NewInfo.vue, 注意需要 id 的传递
 + 将详情的页面手动写上
-+ 依旧是假数据，借助[JSONPlaceholder](http://jsonplaceholder.typicode.com/)，实现根据ID请求对应新闻详情页面的给你 $route.params.id获取数据
++ 依旧是假数据，借助[JSONPlaceholder](https://jsonplaceholder.typicode.com/)，实现根据ID请求对应新闻详情页面的给你 $route.params.id获取数据
 
 + 将数据渲染到页面，由于假数据在上述提供该服务的网址那里有字数限制，只做了一条的新闻内容数据
 
@@ -135,7 +135,7 @@ MINT-UI 做的
 
 ### 图片列表的加载
 
-+ 原来的功能是按照分类请求图片数据，但是缺乏这样的数据接口，只能进行模拟，[JSONPlaceholder](http://jsonplaceholder.typicode.com/)的[图片接口](http://jsonplaceholder.typicode.com/photos)可以取到5000条图片数据，然后借助array.slice()方法按照分类提取一定间隔的图片数据，模拟真实的数据接口。
++ 原来的功能是按照分类请求图片数据，但是缺乏这样的数据接口，只能进行模拟，[JSONPlaceholder](https://jsonplaceholder.typicode.com/)的[图片接口](https://jsonplaceholder.typicode.com/photos)可以取到5000条图片数据，然后借助array.slice()方法按照分类提取一定间隔的图片数据，模拟真实的数据接口。
 
 + 用MINT_UI的Lazy load组件进行懒加载
 + 样式的美化
@@ -155,7 +155,7 @@ MINT-UI 做的
 ### 商品列表，给出基本结构并美化
 
 ### 获取商品列表数据，渲染到页面
-+ 数据是自己自己编的放在[GitHub仓库](https://github.com/guojianglin/vitual-data/blob/master/db.json),然后借助[JSONPlaceholder](http://jsonplaceholder.typicode.com/)进行访问，同时模拟了加载更多按钮的功能。
++ 数据是自己自己编的放在[GitHub仓库](https://github.com/guojianglin/vitual-data/blob/master/db.json),然后借助[JSONPlaceholder](https://jsonplaceholder.typicode.com/)进行访问，同时模拟了加载更多按钮的功能。
 
 ### 新加商品详情页面组件，用编程式导航，跳转该页面（于之前的标签式导航不同）
 

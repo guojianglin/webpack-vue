@@ -63,7 +63,7 @@
     methods: {
       getLunbotu() {
         // 获取数据
-        this.$http.get('http://jsonplaceholder.typicode.com/photos').then(result => {
+        this.$http.get('https://jsonplaceholder.typicode.com/photos').then(result => {
           // console.log('ok');
           // console.log(result);
           if (result.status === 200) {
