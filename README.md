@@ -1,3 +1,12 @@
+## How to run 
+
+inside the project folder, activate your favorite command prompt, then type in
+
+```
+npm install
+npm run dev
+```
+
 # 这是一个Vue项目
 
 ## 基于webpack和Vue搭建的移动电商项目
