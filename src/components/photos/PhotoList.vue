@@ -74,7 +74,7 @@
         })
       },
       getPhotoListByCateId(cateId){
-        this.$http.get('http://jsonplaceholder.typicode.com/photos').then(result=>{
+        this.$http.get('https://jsonplaceholder.typicode.com/photos').then(result=>{
           this.list = result.body.slice(cateId*10,(cateId+1)*10)
           Toast('加载图片呢')
         })

@@ -44,7 +44,7 @@
     },
     methods:{
       getPhotoInfo(){
-        this.$http.get('http://jsonplaceholder.typicode.com/photos/'+this.id).then(result =>{
+        this.$http.get('https://jsonplaceholder.typicode.com/photos/'+this.id).then(result =>{
           if (result.status === 200){
             this.photoInfo = result.body;
             Toast({
